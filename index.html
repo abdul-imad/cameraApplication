@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <video controls autoplay></video><br>
-    <audio controls autoplay></audio>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Camera</title>
+	</head>
+	<body>
+		<video autoplay></video><br />
 
-    <script src="app.js"></script>
-</body>
+		<div class="filter-overlay"></div>
+
+		<div class="filter-container">
+			<div class="filter active" style="background-color: #00000000"></div>
+			<div class="filter" style="background-color: #e6adadc0"></div>
+			<div class="filter" style="background-color: #dde6adc0"></div>
+			<div class="filter" style="background-color: #add9e6c0"></div>
+			<div class="filter" style="background-color: #b3ade6c0"></div>
+		</div>
+
+		<div class="zoom">
+			<div class="zoom-in" title="zoom in">
+				<i class="fas fa-plus"></i>
+			</div>
+			<div class="zoom-out" title="zoom out">
+				<i class="fas fa-minus"></i>
+			</div>
+		</div>
+		<div class="btn">
+			<div class="record-container">
+				<button class="record" title="Record a video"></button>
+			</div>
+			<div class="capture-container">
+				<button class="capture" title="Capture a photo"></button>
+			</div>
+		</div>
+
+		<img
+			src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx1wNgOcmFXyuoiILYVuNNjidPaLIlzxOpaE-56BQwpXWsmskp_j7ZskRt2hbw2jcLYgc&usqp=CAU"
+			alt=""
+			class="rec-symbol"
+		/>
+
+		<div class="timer" style="display: none"></div>
+        <a href="gallery.html" class="gallery">Go to Gallery</a>
+		<script src="script.js"></script>
+        <script src="dbscript.js"></script>
+	</body>
 </html>
