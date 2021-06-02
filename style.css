@@ -177,11 +177,4 @@ video {
     text-align: center;
 }
 
-.gallery{
-    position: fixed;
-    bottom: 5rem;
-    right: 6.5rem;
-    display: block;
-    color:white;
-    font-size:32px;
-}
+

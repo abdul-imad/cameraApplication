@@ -32,15 +32,11 @@ navigator.mediaDevices
 		});
 		videoObj.addEventListener("stop", () => {
 			let blob = new Blob(recording, { type: "video/mp4" });
-            console.log(blob)
 			let url = window.URL.createObjectURL(blob);
-            console.log(url)
-            addMediaToDB(url, "video");
-			// let url = window.URL.createObjectURL(blob);
-			// let a = document.createElement("a");
-			// a.download = "file.mp4";
-			// a.href = url;
-			// a.click();
+			let a = document.createElement("a");
+			a.download = "file.mp4";
+			a.href = url;
+			a.click();
 			recording = [];
 		});
 	})
@@ -126,12 +122,11 @@ captureBtn.addEventListener("click", () => {
 		tool.fillRect(0, 0, canvas.width * zoomLevel, canvas.height * zoomLevel);
 	}
 	let url = canvas.toDataURL();
-    addMediaToDB(url, "img");
-	// let a = document.createElement("a");
-	// a.download = "photo.jpg";
-	// a.href = url;
-	// a.click();
-	// a.remove();
+	let a = document.createElement("a");
+	a.download = "photo.jpg";
+	a.href = url;
+	a.click();
+	a.remove();
 	setTimeout(() => {
 		captureBtn.classList.remove("capture-anim");
 	}, 1000);
